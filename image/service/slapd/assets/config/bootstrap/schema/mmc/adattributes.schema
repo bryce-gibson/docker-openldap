@@ -1,0 +1,4 @@
+attributetype ( 9.9.9.9.9.9.2 NAME ( 'samAccountName' ) DESC 'An AD-like samAccountName' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256} )
+attributetype ( 9.9.9.9.9.9.3 NAME ( 'userPrincipalName' ) DESC 'An AD-like userPrincipalName' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+objectclass ( 9.9.9.9.9.9.1 NAME 'user' DESC 'An AD-like user' SUP top AUXILIARY MUST ( samAccountName $ userPrincipalName $ cn ) MAY ( sn $ description ) )
+objectclass ( 9.9.9.9.9.9.4 NAME 'group' DESC 'An AD-like group' SUP top AUXILIARY MUST ( cn ) MAY ( member $ seeAlso $ owner $ description ) )

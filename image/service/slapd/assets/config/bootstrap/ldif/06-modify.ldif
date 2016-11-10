@@ -1,0 +1,4 @@
+dn: cn=admin,dc=ad-domain,dc=com
+changetype: modrdn
+newrdn: cn=Administrator
+deleteoldrdn: 1
